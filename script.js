@@ -1,6 +1,5 @@
 let currentAudio = null;
 
-// Función para crear la lluvia de corazones
 function crearCorazones() {
     for (let i = 0; i < 15; i++) {
         const corazon = document.createElement('div');
@@ -14,15 +13,11 @@ function crearCorazones() {
     }
 }
 
-// Función para reproducir música y mostrar foto ampliada
 function playSong(audioPath, imgPath, titulo, mensaje) {
     if (currentAudio) currentAudio.pause();
-    
     currentAudio = new Audio(audioPath);
-    currentAudio.play().catch(() => console.log("Audio esperando interacción"));
-
+    currentAudio.play().catch(() => console.log("Clic necesario"));
     crearCorazones();
-
     document.getElementById('imagen-ampliada').src = imgPath;
     document.getElementById('titulo-recuerdo').innerText = titulo;
     document.getElementById('mensaje-recuerdo').innerText = mensaje;
@@ -34,7 +29,6 @@ function stopSong() {
     document.getElementById('player-overlay').classList.add('hidden');
 }
 
-// Funciones para la Carta Final
 function abrirCarta() {
     crearCorazones();
     document.getElementById('carta-overlay').classList.remove('hidden');
