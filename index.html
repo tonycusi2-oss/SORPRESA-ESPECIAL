@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Especial ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Nuestra Historia en Canciones ❤️</h1>
+        <p class="subtitle">Haz clic en cada momento para revivirlo</p>
+
+        <div class="grid">
+            <div class="tarjeta" onclick="playSong('musica/cancion1.mp3', 'imagenes/foto1.jpg', 'Nuestro Inicio', 'Ese primer momento inolvidable...')">
+                <img src="imagenes/foto1.jpg">
+                <div class="info"><h3>Track 01</h3><p>El Inicio</p></div>
+            </div>
+            <div class="tarjeta" onclick="playSong('musica/cancion2.mp3', 'imagenes/foto2.jpg', 'Cómplices', 'Siempre juntos en cada locura.')">
+                <img src="imagenes/foto2.jpg">
+                <div class="info"><h3>Track 02</h3><p>Cómplices</p></div>
+            </div>
+            <div class="tarjeta" onclick="playSong('musica/cancion3.mp3', 'imagenes/foto3.jpg', 'Alegría', 'Tu sonrisa es lo mejor de mi día.')">
+                <img src="imagenes/foto3.jpg">
+                <div class="info"><h3>Track 03</h3><p>Alegría</p></div>
+            </div>
+            <div class="tarjeta" onclick="playSong('musica/cancion4.mp3', 'imagenes/foto4.jpg', 'Juntos', 'Por muchos años más de felicidad.')">
+                <img src="imagenes/foto4.jpg">
+                <div class="info"><h3>Track 04</h3><p>Juntos</p></div>
+            </div>
+            <div class="tarjeta" onclick="playSong('musica/cancion5.mp3', 'imagenes/foto5.jpg', 'Aventura', 'Nuestros viajes son lo mejor del mundo.')">
+                <img src="imagenes/foto5.jpg">
+                <div class="info"><h3>Track 05</h3><p>Aventura</p></div>
+            </div>
+            <div class="tarjeta" onclick="playSong('musica/cancion6.mp3', 'imagenes/foto6.jpg', 'Tu Día', 'Hoy celebramos tu vida. ¡Te amo!')">
+                <img src="imagenes/foto6.jpg">
+                <div class="info"><h3>Track 06</h3><p>Tu Día</p></div>
+            </div>
+        </div>
+
+        <div class="final-section">
+            <button class="btn-sorpresa" onclick="abrirCarta()">Toca para una sorpresa final 🎁</button>
+        </div>
+
+        <div id="player-overlay" class="hidden">
+            <div class="player-content">
+                <img id="imagen-ampliada" class="extended-photo">
+                <h2 id="titulo-recuerdo"></h2>
+                <p id="mensaje-recuerdo"></p>
+                <button class="btn-cerrar" onclick="stopSong()">Cerrar y Pausar</button>
+            </div>
+        </div>
+
+        <div id="carta-overlay" class="hidden">
+            <div class="carta-contenido">
+                <span class="cerrar-x" onclick="cerrarCarta()">&times;</span>
+                <div class="texto-carta">
+                    <h2>Para mi persona favorita ❤️</h2>
+                    <p>Hoy es un día especial y quería recordarte lo mucho que significas para mí.</p>
+                    <p>Cada una de estas canciones y fotos son un pedacito de lo que hemos construido. Gracias por estar a mi lado.</p>
+                    <p>¡Feliz Cumpleaños! Que todos tus sueños se cumplan y "QUE DIOS TE BENDIGA".</p>
+                    <div class="firma">Con mucho amor, Tonny </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
